@@ -1,4 +1,4 @@
-name: Daily Commit
+name: TDS Submission - 23f1002643@ds.study.iitm.ac.in
 
 on:
   schedule:
@@ -12,11 +12,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}  # ✅ allows push access
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit step - 23f1002643@ds.study.ittm.ac.in
+      - name: Commit step - 23f1002643@ds.study.iitm.ac.in
         run: |
           echo "TDSFU Daily run: $(date -u) TDSFU" >> daily-log.txt
+
+      - name: Show Email ID
+        run: echo "23f1002643@ds.study.iitm.ac.in"
 
       - name: Git Commit and Push
         run: |
